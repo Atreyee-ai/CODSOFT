@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atreyee Ghosh | Online Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Header */
+        header {
+            background: #2c2c2c;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #00b4d8;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 50px;
+            background: #444;
+            color: white;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            width: 45%;
+            min-width: 300px;
+        }
+
+        .hero-content h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .hero-content p {
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        /* Hero Image */
+        .hero-image img {
+            width: 280px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* About Section */
+        .about {
+            background: #f9f9f9;
+            padding: 60px 0;
+        }
+
+        .about-container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-image img {
+            width: 280px;
+            border-radius: 8px;
+        }
+
+        .about-text {
+            width: 55%;
+            min-width: 300px;
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c2c2c;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .hero, .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content, .about-text {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Online Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Atreyee Ghosh</h2>
+            <p>Hi, I am a Professional Developer and ICT Degree holder. I have five years of experience in the IT sector as an ICT Lecturer. I'd love to help you build your next amazing project.</p>
+            <button class="btn">Hire Me</button>
+        </div>
+        <div class="hero-image">
+            <img src="header.jpg" alt="Atreyee Ghosh">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="about.jpg" alt="Atreyee Ghosh">
+            </div>
+            <div class="about-text">
+                <h3>About Me</h3>
+                <p>I am a developer who blends expertise with industry know-how to guide your next project development. I specialize in building responsive, creative, and user-friendly websites using HTML, CSS, and JavaScript.</p>
+                <p>As a software developer, I use modern development tools and best practices to create efficient, visually appealing, and user-centered applications. My passion lies in delivering seamless experiences through code and design.</p>
+                <a href="#" class="btn">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Atreyee Ghosh | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atreyee Ghosh | My Portfolio</title>
+
+<style>
+  :root{
+    --dark:#222;
+    --muted:#666;
+    --accent:#2979ff;
+    --bg:#0f0f12;
+    --maxw:1000px;
+    --pad:24px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:#111;
+  }
+
+  /* Navbar */
+  .nav-wrap{
+    background:var(--dark);
+    color:#fff;
+  }
+  .nav{
+    max-width:var(--maxw);
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px var(--pad);
+  }
+  .brand{
+    font-weight:bold;
+  }
+  .brand small{
+    display:block;
+    font-size:12px;
+    color:var(--muted);
+  }
+  .menu a{
+    color:#ddd;
+    margin-left:15px;
+    font-size:13px;
+    text-decoration:none;
+  }
+  .menu a:hover{
+    color:#fff;
+  }
+
+  /* Hero Section */
+  .hero{
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg');
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+    padding:80px 0;
+  }
+  .hero-inner{
+    max-width:var(--maxw);
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:25px;
+    padding:0 var(--pad);
+  }
+  .hero-text{
+    flex:1;
+  }
+  .hero h1{
+    font-size:36px;
+    margin:0 0 10px 0;
+  }
+  .hero p{
+    max-width:600px;
+    line-height:1.6;
+    color:#eee;
+  }
+  .btn{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    padding:10px 16px;
+    border-radius:6px;
+    margin-top:15px;
+    text-decoration:none;
+  }
+  .hero-photo{
+    flex:0 0 280px;
+  }
+  .hero-photo img{
+    width:100%;
+    border-radius:10px;
+    border:2px solid #fff;
+  }
+
+  /* About Section */
+  .about{
+    background:#fff;
+    padding:50px 0;
+  }
+  .about-inner{
+    max-width:var(--maxw);
+    margin:auto;
+    display:grid;
+    grid-template-columns:250px 1fr;
+    gap:25px;
+    padding:0 var(--pad);
+  }
+  .about img{
+    width:100%;
+    border-radius:10px;
+  }
+  .about h2{
+    margin-top:0;
+  }
+  .about p{
+    color:var(--muted);
+    line-height:1.7;
+  }
+  .download{
+    display:inline-block;
+    margin-top:15px;
+    background:var(--accent);
+    color:#fff;
+    padding:8px 12px;
+    border-radius:6px;
+    text-decoration:none;
+  }
+
+  /* Skills */
+  .skills{
+    max-width:var(--maxw);
+    margin:30px auto;
+    padding:0 var(--pad);
+  }
+  .skills h3{
+    color:#fff;
+  }
+  .skill-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .skill{
+    background:#1b1b1f;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:13px;
+  }
+
+  /* Projects */
+  .projects{
+    max-width:var(--maxw);
+    margin:30px auto;
+    padding:0 var(--pad);
+  }
+  .projects h3{
+    color:#fff;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:15px;
+  }
+  .card{
+    background:#fff;
+    border-radius:8px;
+    padding:12px;
+  }
+  .card h4{
+    margin:0 0 6px 0;
+  }
+  .card p{
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  /* Contact */
+  .contact{
+    max-width:var(--maxw);
+    margin:30px auto;
+    padding:0 var(--pad);
+  }
+  .contact .wrap{
+    background:#111;
+    color:#fff;
+    padding:20px;
+    border-radius:8px;
+  }
+  .contact label{
+    font-size:13px;
+    color:#ccc;
+    display:block;
+    margin-top:10px;
+  }
+  .contact input,
+  .contact textarea{
+    width:100%;
+    padding:10px;
+    margin-top:4px;
+    border-radius:5px;
+    border:1px solid #333;
+    background:#0f0f12;
+    color:#fff;
+  }
+  .contact button{
+    margin-top:10px;
+    padding:10px 12px;
+    background:var(--accent);
+    border:none;
+    border-radius:6px;
+    color:#fff;
+  }
+
+  /* Footer */
+  .footer{
+    color:#999;
+    text-align:center;
+    padding:15px;
+  }
+
+  /* Responsive */
+  @media(max-width:800px){
+    .about-inner{
+      grid-template-columns:1fr;
+    }
+    .hero-inner{
+      flex-direction:column;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="nav-wrap">
+    <div class="nav">
+      <div class="brand">
+        Atreyee Ghosh
+        <small>My Personal Portfolio</small>
+      </div>
+      <nav class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Hi, I'm Atreyee Ghosh</h1>
+        <p>I’m a beginner web developer passionate about creating clean, simple, and user-friendly websites using HTML, CSS, and JavaScript.</p>
+        <a class="btn" href="#contact">Hire Me</a>
+      </div>
+      <div class="hero-photo">
+        <img src="header.jpg" alt="Atreyee photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div>
+        <img src="about.jpg" alt="About Atreyee">
+      </div>
+      <div>
+        <h2>About Me</h2>
+        <p>Hello! I’m Atreyee Ghosh, a student and aspiring web developer. I love exploring new technologies and designing creative layouts. My goal is to learn something new every day and keep growing as a front-end developer.</p>
+        <a class="download" href="Atreyee-Ghosh-Resume.pdf" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <h3>My Skills</h3>
+    <div class="skill-list">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">Basic React</div>
+      <div class="skill">Git</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <h3>Projects</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>Portfolio Website</h4>
+        <p>A simple and elegant portfolio created using HTML and CSS.</p>
+      </div>
+      <div class="card">
+        <h4>To-Do List App</h4>
+        <p>A JavaScript app that lets users manage tasks easily.</p>
+      </div>
+      <div class="card">
+        <h4>Travel Blog</h4>
+        <p>A web page sharing my favourite destinations and travel stories.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h3>Contact Me</h3>
+      <form onsubmit="alert('This is a demo form :)'); return false;">
+        <label for="name">Name</label>
+        <input id="name" placeholder="Your name">
+
+        <label for="email">Email</label>
+        <input id="email" placeholder="atreyee@example.com">
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Write me a message"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p style="margin-top:10px; color:#aaa;">
+        Email: <a href="mailto:atreyee@example.com">atreyee@example.com</a> |
+        Phone: +91 98765 43210
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 Atreyee Ghosh. All rights reserved. | Built with ❤ by me
+  </div>
+
+</body>
+</html>
